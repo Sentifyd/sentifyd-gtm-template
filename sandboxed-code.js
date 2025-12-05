@@ -3,14 +3,14 @@ const callInWindow = require('callInWindow');
 const log = require('logToConsole');
 const queryPermission = require('queryPermission');
 
-const SCRIPT_URL = 'https://frontend.sentifyd.io/sentifyd-bot/gtm/sentifyd-gtm-v1.js';
+const SCRIPT_URL = 'https://frontend.sentifyd.io/sentifyd-bot/gtm/sentifyd-gtm-v1.1.3.js';
 
 const onSuccess = () => {
   // 1. Map GTM Data fields to your Component Attributes
   // Left side: The kebab-case attribute name expected by <sentifyd-bot>
   // Right side: The GTM Template field name (data.variableName)
   const config = {
-    // Logic
+    // Embedding in host
     'containerId': data.containerId,
 
     // Credentials
@@ -21,7 +21,6 @@ const onSuccess = () => {
     // Layout
     'toggler': data.toggler,
     'compact': data.compact,
-    'target-app': data.targetApp,
     'canvas-width': data.canvasWidth,
     'canvas-height': data.canvasHeight,
     'chatbot-height': data.chatbotHeight,
@@ -38,7 +37,7 @@ const onSuccess = () => {
     'terms-accepted': data.termsAccepted,
     'avatar-background': data.avatarBackground,
 
-    // UX
+    // Conversation
     'barge-in': data.bargeIn,
     'enable-captions': data.enableCaptions
   };
