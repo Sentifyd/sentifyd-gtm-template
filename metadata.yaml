@@ -15,5 +15,5 @@
 homepage: "https://sentifyd.io"
 documentation: "https://docs.sentifyd.io"
 versions:
-  - sha: <to be added>
+  - sha: 1e06d96437adaf8bd2bb0d123c9179851ac18e7e
     changeNotes: Initial Version
